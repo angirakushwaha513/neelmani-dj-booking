@@ -1,0 +1,898 @@
+/* =========================================
+   DJ BOOKING PRO
+   STEP 4 - REVIEW
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    font-size: 16px;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #090d16,
+            #151d2f
+        );
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+
+    width: 100%;
+
+    padding:
+        clamp(1rem, 3vw, 1.5rem);
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff0055,
+            #ff7a00,
+            #ffcc00
+        );
+
+}
+
+
+.brand {
+
+    max-width: 75rem;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1rem;
+
+}
+
+
+.fake-logo {
+
+    width:
+        clamp(3rem, 8vw, 4.5rem);
+
+    aspect-ratio: 1;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #ff0055;
+
+    font-size:
+        clamp(1.8rem, 5vw, 3rem);
+
+}
+
+
+.brand h1 {
+
+    font-size:
+        clamp(1.3rem, 4vw, 2.2rem);
+
+}
+
+
+.brand p {
+
+    margin-top: .25rem;
+
+    font-size:
+        clamp(.8rem, 2vw, 1rem);
+
+}
+
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+.progress {
+
+    width: 100%;
+
+    max-width: 70rem;
+
+    margin:
+        1.5rem auto;
+
+    padding: 0 1rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.progress-step {
+
+    min-width: 3.5rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: .4rem;
+
+}
+
+
+.progress-step span {
+
+    width: 2.4rem;
+
+    height: 2.4rem;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #334155;
+
+    color: #cbd5e1;
+
+    font-weight: bold;
+
+}
+
+
+.progress-step.done span {
+
+    background: #16a34a;
+
+    color: #ffffff;
+
+}
+
+
+.progress-step.active span {
+
+    background: #ff0055;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 0 .8rem
+        rgba(255, 0, 85, .5);
+
+}
+
+
+.progress-step small {
+
+    font-size:
+        clamp(.6rem, 1.5vw, .8rem);
+
+    color: #94a3b8;
+
+    white-space: nowrap;
+
+}
+
+
+.progress-step.done small,
+.progress-step.active small {
+
+    color: #ffffff;
+
+    font-weight: bold;
+
+}
+
+
+.progress-line {
+
+    width:
+        clamp(1.5rem, 8vw, 6rem);
+
+    height: .15rem;
+
+    background: #334155;
+
+}
+
+
+.progress-line.done {
+
+    background: #16a34a;
+
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.container {
+
+    width: 100%;
+
+    padding:
+        1rem;
+
+}
+
+
+.review-card {
+
+    width: 100%;
+
+    max-width: 65rem;
+
+    margin: auto;
+
+    padding:
+        clamp(1rem, 4vw, 2.5rem);
+
+    background: #182235;
+
+    border:
+        1px solid #334155;
+
+    border-radius: 1rem;
+
+    box-shadow:
+        0 1rem 3rem
+        rgba(0, 0, 0, .35);
+
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.heading {
+
+    text-align: center;
+
+    margin-bottom: 2rem;
+
+}
+
+
+.step-badge {
+
+    display: inline-block;
+
+    padding:
+        .35rem .8rem;
+
+    border-radius: 2rem;
+
+    background:
+        rgba(255, 0, 85, .15);
+
+    color: #ffcc00;
+
+    font-size: .8rem;
+
+    font-weight: bold;
+
+}
+
+
+.heading h2 {
+
+    margin-top: .8rem;
+
+    font-size:
+        clamp(1.5rem, 5vw, 2.2rem);
+
+}
+
+
+.heading p {
+
+    margin-top: .5rem;
+
+    color: #b8c1d1;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   REVIEW SECTION
+========================================= */
+
+.review-section {
+
+    margin-bottom: 1.4rem;
+
+    padding:
+        clamp(1rem, 3vw, 1.5rem);
+
+    background: #101827;
+
+    border:
+        1px solid #334155;
+
+    border-radius: .8rem;
+
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.section-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-bottom: 1.2rem;
+
+}
+
+
+.section-heading > div:first-child {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .8rem;
+
+}
+
+
+.section-icon {
+
+    width: 2.6rem;
+
+    height: 2.6rem;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: .6rem;
+
+    background: #182235;
+
+    font-size: 1.3rem;
+
+}
+
+
+.section-heading h3 {
+
+    font-size:
+        clamp(1rem, 3vw, 1.25rem);
+
+}
+
+
+.section-heading p {
+
+    margin-top: .25rem;
+
+    color: #94a3b8;
+
+    font-size: .8rem;
+
+}
+
+
+/* =========================================
+   EDIT BUTTON
+========================================= */
+
+.edit-button {
+
+    flex-shrink: 0;
+
+    padding:
+        .55rem .85rem;
+
+    border:
+        1px solid #475569;
+
+    border-radius: .5rem;
+
+    background: #263247;
+
+    color: #ffffff;
+
+    font-size: .85rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        .2s ease;
+
+}
+
+
+.edit-button:hover {
+
+    background: #334155;
+
+    border-color: #ffcc00;
+
+    transform: translateY(-1px);
+
+}
+
+
+.edit-button:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================
+   INFORMATION GRID
+========================================= */
+
+.info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: .8rem;
+
+}
+
+
+.info-item {
+
+    min-width: 0;
+
+    padding: .9rem;
+
+    background: #182235;
+
+    border-radius: .55rem;
+
+    border:
+        1px solid #293548;
+
+}
+
+
+.info-item.full {
+
+    grid-column:
+        1 / -1;
+
+}
+
+
+.info-item span {
+
+    display: block;
+
+    margin-bottom: .35rem;
+
+    color: #94a3b8;
+
+    font-size: .78rem;
+
+}
+
+
+.info-item strong {
+
+    display: block;
+
+    color: #ffffff;
+
+    overflow-wrap: anywhere;
+
+    line-height: 1.4;
+
+}
+
+
+/* =========================================
+   AMOUNT SUMMARY
+========================================= */
+
+.amount-summary {
+
+    margin-top: 1rem;
+
+    padding:
+        .8rem 1rem;
+
+    background: #0b1220;
+
+    border-radius: .6rem;
+
+}
+
+
+.amount-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: .8rem 0;
+
+    border-bottom:
+        1px solid #293548;
+
+}
+
+
+.amount-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.amount-row span {
+
+    color: #cbd5e1;
+
+}
+
+
+.amount-row strong {
+
+    white-space: nowrap;
+
+}
+
+
+.amount-row.advance strong {
+
+    color: #22c55e;
+
+    font-size:
+        clamp(1rem, 3vw, 1.3rem);
+
+}
+
+
+.amount-row.remaining strong {
+
+    color: #fb923c;
+
+}
+
+
+/* =========================================
+   REVIEW NOTE
+========================================= */
+
+.review-note {
+
+    display: flex;
+
+    gap: .8rem;
+
+    margin-top: 1.5rem;
+
+    padding: 1rem;
+
+    background:
+        rgba(22, 163, 74, .08);
+
+    border:
+        1px solid
+        rgba(22, 163, 74, .25);
+
+    border-radius: .7rem;
+
+}
+
+
+.review-note > span {
+
+    font-size: 1.4rem;
+
+}
+
+
+.review-note strong {
+
+    color: #4ade80;
+
+}
+
+
+.review-note p {
+
+    margin-top: .35rem;
+
+    color: #a7b4c8;
+
+    font-size: .85rem;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.review-error {
+
+    min-height: 1.2rem;
+
+    margin-top: 1rem;
+
+    color: #ff6b81;
+
+    text-align: center;
+
+    font-size: .9rem;
+
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.action-buttons {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1.5fr;
+
+    gap: .8rem;
+
+    margin-top: 1.5rem;
+
+}
+
+
+.back-button,
+.continue-button {
+
+    min-height: 3.2rem;
+
+    padding:
+        .9rem 1rem;
+
+    border-radius: .7rem;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        .2s ease;
+
+}
+
+
+.back-button {
+
+    border:
+        1px solid #475569;
+
+    background: #334155;
+
+    color: #ffffff;
+
+}
+
+
+.back-button:hover {
+
+    border-color: #ffcc00;
+
+    background: #3d4b60;
+
+}
+
+
+.continue-button {
+
+    border: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff0055,
+            #ff7a00
+        );
+
+    color: #ffffff;
+
+}
+
+
+.continue-button:hover {
+
+    filter: brightness(1.1);
+
+    transform: translateY(-1px);
+
+}
+
+
+.continue-button:active,
+.back-button:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    margin-top: 2rem;
+
+    padding:
+        1.5rem 1rem;
+
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: .85rem;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 45rem) {
+
+    .brand {
+
+        justify-content: flex-start;
+
+    }
+
+
+    .progress {
+
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        padding-bottom: .5rem;
+
+    }
+
+
+    .progress-step {
+
+        flex-shrink: 0;
+
+    }
+
+
+    .progress-line {
+
+        flex-shrink: 0;
+
+        width: 2rem;
+
+    }
+
+
+    .section-heading {
+
+        align-items: flex-start;
+
+    }
+
+
+    .info-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .info-item.full {
+
+        grid-column: auto;
+
+    }
+
+
+    .action-buttons {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 30rem) {
+
+    .section-heading {
+
+        flex-direction: column;
+
+    }
+
+
+    .edit-button {
+
+        width: 100%;
+
+    }
+
+
+    .amount-row {
+
+        align-items: flex-start;
+
+    }
+
+}

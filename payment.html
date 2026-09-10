@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Payment - DJ Booking Pro</title>
+
+    <link
+        rel="stylesheet"
+        href="payment.css">
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="brand">
+
+        <div class="fake-logo">
+            🎧
+        </div>
+
+        <div>
+
+            <h1>
+                DJ BOOKING PRO
+            </h1>
+
+            <p>
+                NEELMANI KUSHWAHA
+            </p>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     PROGRESS
+===================================================== -->
+
+<div class="progress">
+
+
+    <div class="progress-step done">
+
+        <span>✓</span>
+
+        <small>
+            Customer
+        </small>
+
+    </div>
+
+
+    <div class="progress-line done"></div>
+
+
+    <div class="progress-step done">
+
+        <span>✓</span>
+
+        <small>
+            Event
+        </small>
+
+    </div>
+
+
+    <div class="progress-line done"></div>
+
+
+    <div class="progress-step done">
+
+        <span>✓</span>
+
+        <small>
+            Package
+        </small>
+
+    </div>
+
+
+    <div class="progress-line done"></div>
+
+
+    <div class="progress-step done">
+
+        <span>✓</span>
+
+        <small>
+            Review
+        </small>
+
+    </div>
+
+
+    <div class="progress-line done"></div>
+
+
+    <div class="progress-step active">
+
+        <span>5</span>
+
+        <small>
+            Payment
+        </small>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="container">
+
+
+    <section class="payment-card">
+
+
+        <!-- =================================================
+             HEADING
+        ================================================== -->
+
+        <div class="heading">
+
+            <span class="step-badge">
+                STEP 5
+            </span>
+
+
+            <h2>
+                Secure Booking Payment
+            </h2>
+
+
+            <p>
+                अपनी booking को confirm करने के लिए
+                advance payment करें।
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CUSTOMER INFORMATION
+        ================================================== -->
+
+        <section class="info-box">
+
+
+            <div class="info-header">
+
+                <span class="info-icon">
+                    👤
+                </span>
+
+
+                <div>
+
+                    <h3>
+                        Booking For
+                    </h3>
+
+                    <p>
+                        Customer की जानकारी
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="customer-summary">
+
+
+                <div class="summary-item">
+
+                    <span>
+                        Customer
+                    </span>
+
+                    <strong id="customerName">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <span>
+                        Mobile
+                    </span>
+
+                    <strong id="customerMobile">
+                        -
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             PAYMENT SUMMARY
+        ================================================== -->
+
+        <section class="amount-box">
+
+
+            <div class="section-title">
+
+                <span>
+                    💰
+                </span>
+
+                <div>
+
+                    <h3>
+                        Payment Summary
+                    </h3>
+
+                    <p>
+                        आपकी booking का payment विवरण
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="amount-row">
+
+                <span>
+                    Total Booking Amount
+                </span>
+
+                <strong id="totalAmount">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+
+            <div class="amount-row advance-row">
+
+                <span>
+                    Advance To Pay
+                </span>
+
+                <strong id="advanceAmount">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+
+            <div class="amount-row remaining-row">
+
+                <span>
+                    Remaining After Advance
+                </span>
+
+                <strong id="remainingAmount">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             PAYMENT METHOD
+        ================================================== -->
+
+        <section class="method-box">
+
+
+            <div class="section-title">
+
+                <span>
+                    💳
+                </span>
+
+                <div>
+
+                    <h3>
+                        Select Payment Method
+                    </h3>
+
+                    <p>
+                        Payment method select करें।
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="method-grid">
+
+
+                <!-- UPI -->
+
+                <label class="method-option">
+
+                    <input
+                        type="radio"
+                        name="paymentMethod"
+                        value="UPI">
+
+                    <div class="method-content">
+
+                        <span class="method-icon">
+                            📱
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                UPI
+                            </strong>
+
+                            <small>
+                                Google Pay / PhonePe /
+                                Paytm / UPI
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </label>
+
+
+
+                <!-- CASH -->
+
+                <label class="method-option">
+
+                    <input
+                        type="radio"
+                        name="paymentMethod"
+                        value="Cash">
+
+                    <div class="method-content">
+
+                        <span class="method-icon">
+                            💵
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Cash
+                            </strong>
+
+                            <small>
+                                Pay directly to DJ owner
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </label>
+
+
+
+                <!-- OTHER -->
+
+                <label class="method-option">
+
+                    <input
+                        type="radio"
+                        name="paymentMethod"
+                        value="Other">
+
+                    <div class="method-content">
+
+                        <span class="method-icon">
+                            💳
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Other
+                            </strong>
+
+                            <small>
+                                Other payment method
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </label>
+
+
+            </div>
+
+
+
+            <p
+                id="methodError"
+                class="error">
+            </p>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             UPI INFORMATION
+        ================================================== -->
+
+        <section
+            class="upi-box"
+            id="upiBox">
+
+
+            <div class="section-title">
+
+                <span>
+                    📱
+                </span>
+
+                <div>
+
+                    <h3>
+                        UPI Payment
+                    </h3>
+
+                    <p>
+                        UPI payment selected है।
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="test-payment-message">
+
+                <strong>
+                    UPI Payment
+                </strong>
+
+                <p>
+
+                    अभी payment system testing mode में है।
+
+                    बाद में इसी section में secure
+                    Razorpay UPI checkout जोड़ा जाएगा।
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             CASH INFORMATION
+        ================================================== -->
+
+        <section
+            class="cash-box"
+            id="cashBox">
+
+
+            <div class="section-title">
+
+                <span>
+                    💵
+                </span>
+
+                <div>
+
+                    <h3>
+                        Cash Payment
+                    </h3>
+
+                    <p>
+                        Cash payment की जानकारी
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <p>
+
+                Cash payment के लिए booking owner
+                से directly contact करें।
+
+            </p>
+
+
+
+            <div class="owner-contact">
+
+                <span>
+                    Booking Owner
+                </span>
+
+
+                <strong>
+                    NEELMANI KUSHWAHA
+                </strong>
+
+
+                <span>
+                    Mobile:
+                    <strong>
+                        9876543210
+                    </strong>
+                </span>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             PAYMENT STATUS
+        ================================================== -->
+
+        <div
+            id="paymentStatus"
+            class="payment-status">
+        </div>
+
+
+
+        <!-- =================================================
+             PAYMENT ACTION
+        ================================================== -->
+
+        <section class="payment-action">
+
+
+            <div class="secure-heading">
+
+                <span>
+                    🔒
+                </span>
+
+
+                <div>
+
+                    <strong>
+                        Secure Payment
+                    </strong>
+
+
+                    <p>
+
+                        नीचे दिए button से payment
+                        process शुरू करें।
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <button
+                type="button"
+                id="payButton"
+                class="pay-button">
+
+                <span>
+                    💳
+                </span>
+
+                <span>
+                    Continue to Payment
+                </span>
+
+            </button>
+
+
+            <p class="test-note">
+
+                ⚠️ अभी Test Mode है।
+                Real payment gateway बाद में connect किया जाएगा।
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             BACK
+        ================================================== -->
+
+        <button
+            type="button"
+            id="backButton"
+            class="back-button">
+
+            ← Back to Review
+
+        </button>
+
+
+
+        <!-- =================================================
+             SECURITY
+        ================================================== -->
+
+        <div class="security-note">
+
+            <span>
+                🔒
+            </span>
+
+
+            <div>
+
+                <strong>
+                    Payment Verification
+                </strong>
+
+
+                <p>
+
+                    Real payment में payment gateway और
+                    server-side verification के बाद ही
+                    booking को confirmed माना जाएगा।
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    © 2026 DJ Booking Pro |
+    NEELMANI KUSHWAHA
+
+</footer>
+
+
+
+<script src="payment.js"></script>
+
+</body>
+
+</html>

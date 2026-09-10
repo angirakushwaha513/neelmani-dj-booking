@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Google Login | DJ Booking Pro
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="google-login.css"
+    >
+
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <section class="login-card">
+
+            <div class="logo">
+                🎧
+            </div>
+
+            <h1>
+                DJ Booking Pro
+            </h1>
+
+            <h2>
+                Sign in to continue
+            </h2>
+
+            <p class="description">
+                Sign in with your Google account
+                to continue your DJ booking.
+            </p>
+
+
+            <!-- =================================
+                 GOOGLE SIGN-IN BUTTON
+            ================================== -->
+
+            <div
+                id="google-button"
+                class="google-button"
+            ></div>
+
+
+            <!-- =================================
+                 LOGIN MESSAGE
+            ================================== -->
+
+            <div
+                id="login-message"
+                class="login-message"
+                aria-live="polite"
+            ></div>
+
+
+            <!-- =================================
+                 GOOGLE ACCOUNT HELP
+            ================================== -->
+
+            <div class="account-help">
+
+                <strong>
+                    Don't have a Google account?
+                </strong>
+
+                <p>
+                    Create a Google account first
+                    and then come back here to sign in.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         GOOGLE IDENTITY SERVICES
+    ========================================== -->
+
+    <script
+        src="https://accounts.google.com/gsi/client"
+        async
+        defer
+    ></script>
+
+
+    <!-- =========================================
+         OUR GOOGLE LOGIN SCRIPT
+    ========================================== -->
+
+    <script
+        src="google-login.js"
+    ></script>
+
+</body>
+</html>

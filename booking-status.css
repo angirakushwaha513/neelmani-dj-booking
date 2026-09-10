@@ -1,0 +1,837 @@
+/* =========================================================
+   DJ BOOKING PRO
+   BOOKING STATUS PAGE
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #080808,
+            #151515,
+            #080808
+        );
+
+    color: #ffffff;
+
+    min-height: 100vh;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.top-header {
+    width: 100%;
+
+    background: #050505;
+
+    border-bottom: 1px solid #292929;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+.header-container {
+    width: min(1200px, 94%);
+
+    margin: auto;
+
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.logo {
+    font-size: clamp(18px, 2vw, 25px);
+
+    font-weight: 800;
+
+    color: #ffffff;
+
+    letter-spacing: 0.5px;
+}
+
+
+.header-title {
+    font-size: clamp(14px, 1.5vw, 19px);
+
+    color: #bbbbbb;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.main-container {
+    width: min(1000px, 94%);
+
+    margin: 35px auto 50px;
+}
+
+
+/* =========================================================
+   SEARCH CARD
+========================================================= */
+
+.search-card {
+    background: #111111;
+
+    border: 1px solid #292929;
+
+    border-radius: 16px;
+
+    padding: clamp(20px, 4vw, 35px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35);
+
+    margin-bottom: 25px;
+}
+
+
+.search-card h1 {
+    font-size: clamp(24px, 4vw, 34px);
+
+    margin-bottom: 8px;
+}
+
+
+.search-description {
+    color: #aaaaaa;
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.search-box {
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    gap: 12px;
+
+    align-items: end;
+}
+
+
+.search-box label {
+    grid-column: 1 / -1;
+
+    color: #dddddd;
+
+    font-weight: 600;
+
+    font-size: 14px;
+}
+
+
+.search-box input {
+    width: 100%;
+
+    height: 50px;
+
+    background: #080808;
+
+    border: 1px solid #444444;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    padding: 0 15px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    text-transform: uppercase;
+}
+
+
+.search-box input:focus {
+    border-color: #777777;
+
+    box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.06);
+}
+
+
+.search-box button {
+    height: 50px;
+
+    padding: 0 22px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #000000;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.search-box button:hover {
+    background: #dddddd;
+
+    transform: translateY(-1px);
+}
+
+
+.search-box button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.error-message {
+    margin-top: 18px;
+
+    padding: 12px 15px;
+
+    background: #351313;
+
+    border: 1px solid #7a3030;
+
+    border-radius: 9px;
+
+    color: #ffb1b1;
+
+    font-size: 14px;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   RESULT SECTION
+========================================================= */
+
+.result-section {
+    width: 100%;
+}
+
+
+/* =========================================================
+   STATUS BANNER
+========================================================= */
+
+.status-banner {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 22px;
+
+    border-radius: 16px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #315f3b;
+
+    background:
+        linear-gradient(
+            135deg,
+            #102016,
+            #0b140d
+        );
+}
+
+
+.status-banner.cancelled {
+    border-color: #703232;
+
+    background:
+        linear-gradient(
+            135deg,
+            #251010,
+            #140909
+        );
+}
+
+
+.status-banner.pending {
+    border-color: #705f32;
+
+    background:
+        linear-gradient(
+            135deg,
+            #211c0e,
+            #131107
+        );
+}
+
+
+.status-icon {
+    width: 55px;
+
+    height: 55px;
+
+    min-width: 55px;
+
+    border-radius: 50%;
+
+    background: #1e7a38;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 28px;
+
+    font-weight: 800;
+}
+
+
+.status-banner.cancelled .status-icon {
+    background: #9b3030;
+}
+
+
+.status-banner.pending .status-icon {
+    background: #927426;
+}
+
+
+.status-text h2 {
+    font-size: clamp(20px, 3vw, 28px);
+
+    margin-bottom: 3px;
+}
+
+
+.status-text p {
+    color: #bbbbbb;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   BOOKING NUMBER
+========================================================= */
+
+.booking-number-card {
+    background: #0e0e0e;
+
+    border: 1px solid #303030;
+
+    border-radius: 12px;
+
+    padding: 17px 20px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+.booking-number-card span {
+    color: #aaaaaa;
+
+    font-size: 14px;
+}
+
+
+.booking-number-card strong {
+    font-size: 18px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   DETAILS CARD
+========================================================= */
+
+.details-card {
+    background: #111111;
+
+    border: 1px solid #292929;
+
+    border-radius: 15px;
+
+    margin-bottom: 18px;
+
+    overflow: hidden;
+}
+
+
+.card-heading {
+    padding: 16px 20px;
+
+    background: #171717;
+
+    border-bottom: 1px solid #292929;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+.details-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 0;
+
+}
+
+
+.detail-item {
+    padding: 17px 20px;
+
+    border-bottom: 1px solid #242424;
+
+    min-width: 0;
+}
+
+
+.detail-item:nth-child(odd) {
+    border-right: 1px solid #242424;
+}
+
+
+.detail-item.full-width {
+    grid-column: 1 / -1;
+
+    border-right: none;
+}
+
+
+.detail-label {
+    display: block;
+
+    color: #888888;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+
+    margin-bottom: 5px;
+}
+
+
+.detail-item strong {
+    display: block;
+
+    color: #eeeeee;
+
+    font-size: 15px;
+
+    word-break: break-word;
+
+    white-space: pre-line;
+}
+
+
+/* =========================================================
+   TOTAL
+========================================================= */
+
+.total-amount {
+    font-size: 20px !important;
+
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   PAYMENT STATUS
+========================================================= */
+
+.payment-status {
+    display: inline-block !important;
+
+    width: fit-content;
+
+    padding: 5px 11px;
+
+    border-radius: 20px;
+
+    background: #194c28;
+
+    color: #9dffb2 !important;
+
+    font-size: 13px !important;
+}
+
+
+.payment-status.unpaid {
+    background: #553b12;
+
+    color: #ffd98a !important;
+}
+
+
+.payment-status.cancelled {
+    background: #541c1c;
+
+    color: #ff9d9d !important;
+}
+
+
+/* =========================================================
+   EXTRAS
+========================================================= */
+
+.extras-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.extra-item {
+    display: inline-block;
+
+    background: #202020;
+
+    border: 1px solid #373737;
+
+    border-radius: 8px;
+
+    padding: 6px 9px;
+
+    font-size: 13px;
+
+    color: #dddddd;
+}
+
+
+/* =========================================================
+   TRANSACTION ID
+========================================================= */
+
+.transaction-id {
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+    font-size: 13px !important;
+
+    color: #d7d7d7 !important;
+
+    word-break: break-all;
+}
+
+
+/* =========================================================
+   FINAL STATUS CARD
+========================================================= */
+
+.final-status-card {
+    background: #111111;
+
+    border: 1px solid #292929;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    margin-bottom: 18px;
+}
+
+
+.final-status-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 15px 20px;
+
+    border-bottom: 1px solid #242424;
+}
+
+
+.final-status-row:last-child {
+    border-bottom: none;
+}
+
+
+.final-status-row span {
+    color: #999999;
+
+    font-size: 14px;
+}
+
+
+.final-status-row strong {
+    color: #eeeeee;
+
+    font-size: 14px;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   REFRESH BUTTON
+========================================================= */
+
+.refresh-button {
+    width: 100%;
+
+    height: 50px;
+
+    border: 1px solid #3b3b3b;
+
+    border-radius: 10px;
+
+    background: #181818;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+
+.refresh-button:hover {
+    background: #242424;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    text-align: center;
+
+    padding: 25px 15px 35px;
+
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+.footer p + p {
+    margin-top: 4px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .header-container {
+        min-height: 62px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 2px;
+
+        padding: 10px 0;
+    }
+
+
+    .header-title {
+        font-size: 13px;
+    }
+
+
+    .main-container {
+        width: 94%;
+
+        margin-top: 20px;
+    }
+
+
+    .search-box {
+        grid-template-columns: 1fr;
+    }
+
+
+    .search-box button {
+        width: 100%;
+    }
+
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .detail-item:nth-child(odd) {
+        border-right: none;
+    }
+
+
+    .detail-item.full-width {
+        grid-column: auto;
+    }
+
+
+    .status-banner {
+        align-items: flex-start;
+
+        padding: 18px;
+    }
+
+
+    .status-icon {
+        width: 45px;
+
+        height: 45px;
+
+        min-width: 45px;
+
+        font-size: 22px;
+    }
+
+
+    .booking-number-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .final-status-row {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+
+    .final-status-row strong {
+        text-align: left;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .search-card {
+        padding: 18px;
+    }
+
+
+    .details-card {
+        border-radius: 12px;
+    }
+
+
+    .card-heading {
+        padding: 14px 16px;
+
+        font-size: 16px;
+    }
+
+
+    .detail-item {
+        padding: 14px 16px;
+    }
+
+
+    .status-banner {
+        gap: 12px;
+    }
+
+
+    .status-text h2 {
+        font-size: 19px;
+    }
+
+}

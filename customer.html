@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Customer Registration | DJ Booking Pro
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="customer.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="main-header">
+
+        <div class="logo-area">
+
+            <div class="logo-icon">
+                🎧
+            </div>
+
+            <div>
+
+                <h1>
+                    DJ BOOKING PRO
+                </h1>
+
+                <p>
+                    NEELMANI KUSHWAHA
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         PROGRESS BAR
+    ====================================== -->
+
+    <div class="progress-container">
+
+        <div class="progress-step active">
+
+            <div class="step-number">
+                1
+            </div>
+
+            <span>
+                Customer
+            </span>
+
+        </div>
+
+
+        <div class="progress-line"></div>
+
+
+        <div class="progress-step">
+
+            <div class="step-number">
+                2
+            </div>
+
+            <span>
+                Event
+            </span>
+
+        </div>
+
+
+        <div class="progress-line"></div>
+
+
+        <div class="progress-step">
+
+            <div class="step-number">
+                3
+            </div>
+
+            <span>
+                Package
+            </span>
+
+        </div>
+
+
+        <div class="progress-line"></div>
+
+
+        <div class="progress-step">
+
+            <div class="step-number">
+                4
+            </div>
+
+            <span>
+                Payment
+            </span>
+
+        </div>
+
+
+        <div class="progress-line"></div>
+
+
+        <div class="progress-step">
+
+            <div class="step-number">
+                5
+            </div>
+
+            <span>
+                Receipt
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         MAIN
+    ====================================== -->
+
+    <main class="main-container">
+
+
+        <section class="booking-card">
+
+
+            <!-- =================================
+                 STEP TITLE
+            ================================== -->
+
+            <div class="step-title">
+
+                <span class="step-badge">
+                    STEP 1
+                </span>
+
+                <h2>
+                    Customer Registration
+                </h2>
+
+                <p>
+                    पहले अपनी जानकारी भरें और Mobile Number Verify करें
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 CUSTOMER FORM
+            ================================== -->
+
+            <form
+                id="customerForm"
+                novalidate
+            >
+
+
+                <!-- =============================
+                     NAME
+                ============================== -->
+
+                <div class="form-group">
+
+                    <label for="customerName">
+
+                        Customer Name
+                        <span>*</span>
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        name="customerName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+
+                    <small
+                        id="nameError"
+                        class="error-message"
+                    ></small>
+
+                </div>
+
+
+
+                <!-- =============================
+                     MOBILE
+                ============================== -->
+
+                <div class="form-group">
+
+                    <label for="customerMobile">
+
+                        Mobile Number
+                        <span>*</span>
+
+                    </label>
+
+
+                    <div class="mobile-input-wrapper">
+
+                        <span class="country-code">
+                            +91
+                        </span>
+
+                        <input
+                            type="tel"
+                            id="customerMobile"
+                            name="customerMobile"
+                            placeholder="Enter 10 digit mobile number"
+                            inputmode="numeric"
+                            maxlength="10"
+                            autocomplete="tel"
+                            required
+                        >
+
+                    </div>
+
+
+                    <small
+                        id="mobileError"
+                        class="error-message"
+                    ></small>
+
+
+                    <p class="mobile-info">
+
+                        📱 इस number पर verification OTP भेजा जाएगा।
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- =============================
+                     ADDRESS
+                ============================== -->
+
+                <div class="form-group">
+
+                    <label for="customerAddress">
+
+                        Address
+                        <span>*</span>
+
+                    </label>
+
+
+                    <textarea
+                        id="customerAddress"
+                        name="customerAddress"
+                        rows="4"
+                        placeholder="Enter your complete address"
+                        required
+                    ></textarea>
+
+
+                    <small
+                        id="addressError"
+                        class="error-message"
+                    ></small>
+
+                </div>
+
+
+
+                <!-- =============================
+                     TERMS
+                ============================== -->
+
+                <div class="terms-box">
+
+                    <label class="terms-label">
+
+                        <input
+                            type="checkbox"
+                            id="agreeTerms"
+                            required
+                        >
+
+                        <span>
+
+                            मैं confirm करता/करती हूँ कि मेरे द्वारा दी गई
+                            जानकारी सही है और मैं DJ Booking Pro की
+                            booking process को स्वीकार करता/करती हूँ।
+
+                        </span>
+
+                    </label>
+
+
+                    <small
+                        id="termsError"
+                        class="error-message"
+                    ></small>
+
+                </div>
+
+
+
+                <!-- =============================
+                     SEND OTP BUTTON
+                ============================== -->
+
+                <button
+                    type="submit"
+                    id="sendOtpBtn"
+                    class="continue-btn"
+                >
+
+                    <span id="sendOtpBtnText">
+                        Continue & Send OTP →
+                    </span>
+
+                </button>
+
+
+                <!-- GENERAL ERROR -->
+
+                <div
+                    id="formMessage"
+                    class="form-message"
+                ></div>
+
+
+            </form>
+
+
+
+            <!-- =================================
+                 OTP SECTION
+            ================================== -->
+
+            <section
+                id="otpSection"
+                class="otp-section hidden"
+            >
+
+
+                <div class="otp-icon">
+                    🔐
+                </div>
+
+
+                <h2>
+                    Verify Mobile Number
+                </h2>
+
+
+                <p class="otp-description">
+
+                    आपके mobile number पर 6 digit verification
+                    code भेजा गया है।
+
+                </p>
+
+
+                <p
+                    id="otpMobileText"
+                    class="otp-mobile"
+                ></p>
+
+
+
+                <!-- OTP INPUT -->
+
+                <div class="otp-input-container">
+
+                    <input
+                        type="text"
+                        id="otpInput"
+                        class="otp-input"
+                        inputmode="numeric"
+                        autocomplete="one-time-code"
+                        maxlength="6"
+                        placeholder="------"
+                    >
+
+                </div>
+
+
+                <small
+                    id="otpError"
+                    class="error-message otp-error"
+                ></small>
+
+
+                <!-- VERIFY -->
+
+                <button
+                    type="button"
+                    id="verifyOtpBtn"
+                    class="verify-btn"
+                >
+
+                    <span id="verifyOtpBtnText">
+                        Verify OTP ✓
+                    </span>
+
+                </button>
+
+
+                <!-- RESEND -->
+
+                <div class="resend-container">
+
+                    <p>
+                        OTP नहीं मिला?
+                    </p>
+
+                    <button
+                        type="button"
+                        id="resendOtpBtn"
+                        class="resend-btn"
+                        disabled
+                    >
+                        Resend OTP
+                    </button>
+
+                    <span
+                        id="resendTimer"
+                        class="resend-timer"
+                    ></span>
+
+                </div>
+
+
+                <!-- CHANGE NUMBER -->
+
+                <button
+                    type="button"
+                    id="changeNumberBtn"
+                    class="change-number-btn"
+                >
+
+                    ← Change Mobile Number
+
+                </button>
+
+
+            </section>
+
+
+            <!-- =================================
+                 VERIFIED MESSAGE
+            ================================== -->
+
+            <div
+                id="verifiedSection"
+                class="verified-section hidden"
+            >
+
+                <div class="verified-icon">
+                    ✓
+                </div>
+
+                <h2>
+                    Mobile Verified Successfully
+                </h2>
+
+                <p>
+                    आपका mobile number successfully verify हो गया है।
+                </p>
+
+                <p class="redirect-text">
+                    Event Details पर जा रहे हैं...
+                </p>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="main-footer">
+
+        © 2026 DJ Booking Pro |
+        NEELMANI KUSHWAHA
+
+    </footer>
+
+
+
+    <script src="customer.js"></script>
+
+</body>
+
+</html>

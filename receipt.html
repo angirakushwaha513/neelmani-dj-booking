@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Booking Receipt - DJ Booking Pro</title>
+
+    <link
+        rel="stylesheet"
+        href="receipt.css">
+
+</head>
+
+
+<body>
+
+<header class="header">
+
+    <div class="brand">
+
+        <div class="logo">
+            🎧
+        </div>
+
+        <div>
+
+            <h1>
+                DJ BOOKING PRO
+            </h1>
+
+            <p>
+                NEELMANI KUSHWAHA
+            </p>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <section class="receipt-card">
+
+
+        <!-- =========================
+             SUCCESS
+        ========================== -->
+
+        <div class="success">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                Booking Confirmed
+            </h2>
+
+            <p>
+                Payment successfully verified.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             BOOKING ID
+        ========================== -->
+
+        <div class="booking-id-box">
+
+            <span>
+                Booking ID
+            </span>
+
+            <strong id="bookingNumber">
+                -
+            </strong>
+
+        </div>
+
+
+        <!-- =========================
+             CUSTOMER
+        ========================== -->
+
+        <section class="section">
+
+            <h3>
+                1. Customer Details
+            </h3>
+
+            <div class="grid">
+
+                <div>
+                    <span>Name</span>
+                    <strong id="customerName">-</strong>
+                </div>
+
+                <div>
+                    <span>Mobile</span>
+                    <strong id="customerMobile">-</strong>
+                </div>
+
+                <div class="full">
+                    <span>Address</span>
+                    <strong id="customerAddress">-</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EVENT
+        ========================== -->
+
+        <section class="section">
+
+            <h3>
+                2. Event Details
+            </h3>
+
+            <div class="grid">
+
+                <div>
+                    <span>Event Type</span>
+                    <strong id="eventType">-</strong>
+                </div>
+
+                <div>
+                    <span>Date</span>
+                    <strong id="eventDate">-</strong>
+                </div>
+
+                <div>
+                    <span>Time</span>
+                    <strong id="eventTime">-</strong>
+                </div>
+
+                <div>
+                    <span>District</span>
+                    <strong id="district">-</strong>
+                </div>
+
+                <div>
+                    <span>Tehsil</span>
+                    <strong id="tehsil">-</strong>
+                </div>
+
+                <div>
+                    <span>Village</span>
+                    <strong id="village">-</strong>
+                </div>
+
+                <div class="full">
+                    <span>Event Location</span>
+                    <strong id="eventLocation">-</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PACKAGE
+        ========================== -->
+
+        <section class="section">
+
+            <h3>
+                3. DJ Package
+            </h3>
+
+            <div class="package-row">
+
+                <strong id="packageName">
+                    -
+                </strong>
+
+                <strong id="packagePrice">
+                    ₹0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EXTRA
+        ========================== -->
+
+        <section class="section">
+
+            <h3>
+                4. Extra Equipment
+            </h3>
+
+            <div id="extraList">
+
+                <p>
+                    No extra equipment selected.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             AMOUNT
+        ========================== -->
+
+        <section class="section">
+
+            <h3>
+                5. Total Amount
+            </h3>
+
+            <div class="amount-row">
+
+                <span>
+                    Total Amount
+                </span>
+
+                <strong id="totalAmount">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="amount-row">
+
+                <span>
+                    Paid Advance
+                </span>
+
+                <strong
+                    class="paid"
+                    id="advanceAmount">
+
+                    ₹0
+
+                </strong>
+
+            </div>
+
+
+            <div class="amount-row">
+
+                <span>
+                    Remaining Amount
+                </span>
+
+                <strong
+                    class="remaining"
+                    id="remainingAmount">
+
+                    ₹0
+
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PAYMENT
+        ========================== -->
+
+        <section class="section">
+
+            <h3>
+                8. Payment Details
+            </h3>
+
+            <div class="grid">
+
+                <div>
+
+                    <span>
+                        Payment Method
+                    </span>
+
+                    <strong
+                        id="paymentMethod">
+
+                        -
+
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Transaction ID
+                    </span>
+
+                    <strong
+                        id="transactionId">
+
+                        -
+
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Payment Status
+                    </span>
+
+                    <strong
+                        class="verified"
+                        id="paymentStatus">
+
+                        -
+
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Verification
+                    </span>
+
+                    <strong
+                        class="verified"
+                        id="verificationStatus">
+
+                        -
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BUTTONS
+        ========================== -->
+
+        <div class="buttons">
+
+            <button
+                type="button"
+                id="printButton">
+
+                🖨️ Print Receipt
+
+            </button>
+
+
+            <button
+                type="button"
+                id="newBookingButton">
+
+                ➕ New Booking
+
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             NOTE
+        ========================== -->
+
+        <div class="note">
+
+            🔒
+
+            <span>
+                Payment has been verified by the
+                DJ Booking Pro server and the booking
+                has been marked as confirmed.
+            </span>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    © 2026 DJ Booking Pro |
+    NEELMANI KUSHWAHA
+
+</footer>
+
+
+<script src="receipt.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DJ Booking Pro - Admin Login</title>
+
+    <link
+        rel="stylesheet"
+        href="admin-login.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         ADMIN LOGIN
+    ========================================== -->
+
+    <main class="login-container">
+
+
+        <section class="login-card">
+
+
+            <!-- LOGO -->
+
+            <div class="login-logo">
+                🎧
+            </div>
+
+
+            <!-- TITLE -->
+
+            <h1>
+                DJ Booking Pro
+            </h1>
+
+
+            <p class="login-subtitle">
+                Admin Panel Login
+            </p>
+
+
+            <!-- =====================================
+                 USERNAME PASSWORD LOGIN
+            ====================================== -->
+
+            <div class="login-section">
+
+
+                <h2>
+                    🔐 Admin Login
+                </h2>
+
+
+                <form id="adminLoginForm">
+
+
+                    <!-- USERNAME -->
+
+                    <div class="form-group">
+
+                        <label for="username">
+                            Admin Username
+                        </label>
+
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Enter username"
+                            autocomplete="username"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Admin Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        id="loginButton"
+                        class="login-button"
+                    >
+
+                        🔐 Login to Admin Panel
+
+                    </button>
+
+
+                </form>
+
+
+            </div>
+
+
+            <!-- =====================================
+                 DIVIDER
+            ====================================== -->
+
+            <div class="login-divider">
+
+                <span>
+                    OR
+                </span>
+
+            </div>
+
+
+            <!-- =====================================
+                 GOOGLE ADMIN LOGIN
+            ====================================== -->
+
+            <div class="login-section google-section">
+
+
+                <h2>
+                    🔵 Google Admin Login
+                </h2>
+
+
+                <p class="google-info">
+
+                    Authorized Admin Gmail से verify करके login करें
+
+                </p>
+
+
+                <div
+                    id="googleButton"
+                    class="google-login-button"
+                ></div>
+
+
+            </div>
+
+
+            <!-- =====================================
+                 ERROR
+            ====================================== -->
+
+            <div
+                id="loginError"
+                class="login-error"
+            ></div>
+
+
+            <!-- =====================================
+                 STATUS
+            ====================================== -->
+
+            <div
+                id="loginStatus"
+                class="login-status"
+            ></div>
+
+
+            <!-- =====================================
+                 SECURITY
+            ====================================== -->
+
+            <p class="security-note">
+
+                🔒 Authorized admin access only
+
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         GOOGLE IDENTITY SERVICES
+    ========================================== -->
+
+    <script
+        src="https://accounts.google.com/gsi/client"
+        async
+        defer
+    ></script>
+
+
+    <!-- =========================================
+         ADMIN LOGIN JAVASCRIPT
+    ========================================== -->
+
+    <script src="admin-login.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,276 @@
+/* =========================================
+   DJ BOOKING PRO
+   GOOGLE LOGIN
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 16px;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #050505,
+            #181818,
+            #050505
+        );
+
+    color: #222;
+}
+
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.login-page {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 1rem;
+}
+
+
+/* =========================================
+   LOGIN CARD
+========================================= */
+
+.login-card {
+
+    width: 100%;
+
+    max-width: 28rem;
+
+    background: #ffffff;
+
+    border-radius: 1.25rem;
+
+    padding: 2.5rem 2rem;
+
+    text-align: center;
+
+    box-shadow:
+        0 1.5rem 4rem
+        rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+
+    width: 4.5rem;
+
+    height: 4.5rem;
+
+    margin:
+        0 auto
+        1rem;
+
+    border-radius: 50%;
+
+    background: #111111;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 2rem;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.login-card h1 {
+
+    font-size: 1.8rem;
+
+    color: #111111;
+
+    margin-bottom: 0.5rem;
+}
+
+
+.login-card h2 {
+
+    font-size: 1.2rem;
+
+    font-weight: 600;
+
+    color: #333333;
+
+    margin-bottom: 0.75rem;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.description {
+
+    color: #666666;
+
+    font-size: 0.95rem;
+
+    line-height: 1.6;
+
+    margin-bottom: 1.5rem;
+}
+
+
+/* =========================================
+   GOOGLE BUTTON
+========================================= */
+
+.google-button {
+
+    width: 100%;
+
+    min-height: 44px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 1rem 0;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.login-message {
+
+    min-height: 1.5rem;
+
+    margin-top: 0.75rem;
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+
+    color: #555555;
+}
+
+
+.login-message.success {
+
+    color: #188038;
+}
+
+
+.login-message.error {
+
+    color: #d93025;
+}
+
+
+/* =========================================
+   ACCOUNT HELP
+========================================= */
+
+.account-help {
+
+    margin-top: 1.5rem;
+
+    padding-top: 1.25rem;
+
+    border-top:
+        1px solid
+        #eeeeee;
+
+    color: #666666;
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+}
+
+
+.account-help strong {
+
+    color: #222222;
+}
+
+
+.account-help p {
+
+    margin-top: 0.35rem;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .login-page {
+
+        padding: 0.75rem;
+    }
+
+
+    .login-card {
+
+        padding:
+            2rem
+            1.25rem;
+
+        border-radius: 1rem;
+    }
+
+
+    .login-card h1 {
+
+        font-size: 1.5rem;
+    }
+
+
+    .login-card h2 {
+
+        font-size: 1.05rem;
+    }
+
+
+    .description {
+
+        font-size: 0.9rem;
+    }
+
+}

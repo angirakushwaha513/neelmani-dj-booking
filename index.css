@@ -1,0 +1,1370 @@
+/* =========================================================
+   DJ BOOKING PRO
+   INDEX PAGE
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #050509;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.main-header {
+
+    width: 100%;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background:
+        rgba(3, 3, 8, 0.94);
+
+    backdrop-filter:
+        blur(12px);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.12);
+
+}
+
+
+.header-inner {
+
+    width: min(1400px, 94%);
+
+    min-height: 78px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size:
+        clamp(19px, 2.2vw, 30px);
+
+    font-weight: 900;
+
+    letter-spacing: -0.5px;
+
+    white-space: nowrap;
+
+}
+
+
+.logo-dj {
+
+    color: #ffffff;
+
+}
+
+
+.logo-pro {
+
+    color: #ffd000;
+
+}
+
+
+.logo::before {
+
+    content: "🎧";
+
+    font-size:
+        clamp(23px, 2.5vw, 34px);
+
+}
+
+
+/* =========================================================
+   LIVE CLOCK
+========================================================= */
+
+.live-clock {
+
+    min-width: 430px;
+
+    padding: 11px 20px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 50px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 13px;
+
+    box-shadow:
+        inset 0 0 20px rgba(255, 255, 255, 0.02);
+
+}
+
+
+.date-box,
+.time-box {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #eeeeee;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+.clock-line {
+
+    width: 1px;
+
+    height: 22px;
+
+    background:
+        rgba(255, 255, 255, 0.3);
+
+}
+
+
+.live-badge {
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: #16a34a;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 0 15px rgba(22, 163, 74, 0.45);
+
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-box {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 8px 13px;
+
+    border-radius: 35px;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+}
+
+
+.contact-icon {
+
+    width: 43px;
+
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0, 200, 90, 0.12);
+
+    font-size: 21px;
+
+}
+
+
+.contact-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.contact-content small {
+
+    color: #aaaaaa;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.contact-content strong {
+
+    color: #ffd000;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-section {
+
+    position: relative;
+
+    min-height: 850px;
+
+    padding:
+        70px 3% 60px;
+
+    overflow: hidden;
+
+    background-image:
+        url("dj-party-bg.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+}
+
+
+/* =========================================================
+   HERO OVERLAY
+========================================================= */
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.62),
+            rgba(0, 0, 0, 0.25) 40%,
+            rgba(0, 0, 0, 0.78) 100%
+        );
+
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    max-width: 1000px;
+
+    margin:
+        0 auto 55px;
+
+}
+
+
+.welcome-text {
+
+    font-size:
+        clamp(14px, 1.5vw, 20px);
+
+    font-weight: 800;
+
+    letter-spacing: 5px;
+
+    color: #eeeeee;
+
+    margin-bottom: 10px;
+
+}
+
+
+.hero-content h1 {
+
+    font-size:
+        clamp(50px, 8vw, 108px);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: -3px;
+
+    text-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.8);
+
+}
+
+
+.hero-content h1 strong {
+
+    color: #ffd000;
+
+}
+
+
+.sound-line {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 20px auto;
+
+}
+
+
+.sound-line span {
+
+    width: clamp(80px, 12vw, 180px);
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ffd000
+        );
+
+}
+
+
+.sound-line span:last-child {
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffd000,
+            transparent
+        );
+
+}
+
+
+.sound-line b {
+
+    color: #ffd000;
+
+    font-size: 32px;
+
+}
+
+
+.hero-content h2 {
+
+    font-size:
+        clamp(22px, 3vw, 39px);
+
+    margin-bottom: 7px;
+
+}
+
+
+.hero-subtitle {
+
+    color: #ffd000;
+
+    font-size:
+        clamp(18px, 2vw, 26px);
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+}
+
+
+.hero-description {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #eeeeee;
+
+    font-size:
+        clamp(13px, 1.3vw, 17px);
+
+}
+
+
+/* =========================================================
+   MAIN OPTIONS
+========================================================= */
+
+.main-options {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: min(1100px, 94%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 28px;
+
+}
+
+
+/* =========================================================
+   OPTION CARD
+========================================================= */
+
+.option-card {
+
+    min-height: 380px;
+
+    padding: 27px 25px 23px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(5, 5, 15, 0.88);
+
+    backdrop-filter:
+        blur(9px);
+
+    border: 1px solid;
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.45);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.option-card:hover {
+
+    transform:
+        translateY(-8px);
+
+}
+
+
+.booking-card {
+
+    border-color:
+        #a600ff;
+
+    box-shadow:
+        0 0 30px rgba(166, 0, 255, 0.18);
+
+}
+
+
+.booking-card:hover {
+
+    box-shadow:
+        0 0 40px rgba(166, 0, 255, 0.35);
+
+}
+
+
+.status-card {
+
+    border-color:
+        #008cff;
+
+    box-shadow:
+        0 0 30px rgba(0, 140, 255, 0.18);
+
+}
+
+
+.status-card:hover {
+
+    box-shadow:
+        0 0 40px rgba(0, 140, 255, 0.35);
+
+}
+
+
+.admin-card {
+
+    border-color:
+        #00e65a;
+
+    box-shadow:
+        0 0 30px rgba(0, 230, 90, 0.18);
+
+}
+
+
+.admin-card:hover {
+
+    box-shadow:
+        0 0 40px rgba(0, 230, 90, 0.35);
+
+}
+
+
+/* =========================================================
+   OPTION ICON
+========================================================= */
+
+.option-icon {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin: 0 auto 17px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 35px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+}
+
+
+.booking-card .option-icon {
+
+    background:
+        #7114e8;
+
+    box-shadow:
+        0 0 25px rgba(160, 30, 255, 0.5);
+
+}
+
+
+.status-card .option-icon {
+
+    background:
+        #0879e8;
+
+    box-shadow:
+        0 0 25px rgba(0, 130, 255, 0.5);
+
+}
+
+
+.admin-card .option-icon {
+
+    background:
+        #08a63e;
+
+    box-shadow:
+        0 0 25px rgba(0, 230, 90, 0.5);
+
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.option-card h3 {
+
+    text-align: center;
+
+    font-size:
+        clamp(21px, 2vw, 28px);
+
+    margin-bottom: 8px;
+
+}
+
+
+.option-title {
+
+    text-align: center;
+
+    color: #ffd000;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+
+}
+
+
+.option-card ul {
+
+    list-style: none;
+
+    margin-bottom: 22px;
+
+}
+
+
+.option-card li {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #dddddd;
+
+    font-size: 14px;
+
+    margin-bottom: 11px;
+
+}
+
+
+.option-card li span {
+
+    width: 19px;
+
+    height: 19px;
+
+    min-width: 19px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #6d16dc;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+}
+
+
+.status-card li span {
+
+    background: #087bea;
+
+}
+
+
+.admin-card li span {
+
+    background: #0ab447;
+
+}
+
+
+/* =========================================================
+   MAIN BUTTON
+========================================================= */
+
+.main-button {
+
+    min-height: 55px;
+
+    width: 100%;
+
+    padding: 0 16px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #ffffff;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+
+}
+
+
+.main-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.12);
+
+}
+
+
+.main-button strong {
+
+    flex: 1;
+
+    text-align: left;
+
+    font-size: 16px;
+
+}
+
+
+.main-button b {
+
+    font-size: 24px;
+
+}
+
+
+.purple-button {
+
+    background:
+        linear-gradient(
+            90deg,
+            #7514ee,
+            #9d19ff
+        );
+
+}
+
+
+.blue-button {
+
+    background:
+        linear-gradient(
+            90deg,
+            #086ee8,
+            #078eff
+        );
+
+}
+
+
+.green-button {
+
+    background:
+        linear-gradient(
+            90deg,
+            #079d3b,
+            #0bc34e
+        );
+
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats-section {
+
+    position: relative;
+
+    width: min(1200px, 94%);
+
+    margin:
+        -5px auto 0;
+
+    min-height: 155px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    padding: 22px;
+
+    border:
+        1px solid #6b20c7;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20, 8, 45, 0.97),
+            rgba(7, 7, 20, 0.97)
+        );
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.equipment-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.equipment-image {
+
+    width: 75px;
+
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    font-size: 35px;
+
+}
+
+
+.stats-container {
+
+    flex: 1;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    align-items: center;
+
+}
+
+
+.stat-box {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    gap: 3px;
+
+}
+
+
+.stat-icon {
+
+    font-size: 25px;
+
+}
+
+
+.stat-box strong {
+
+    color: #ffd000;
+
+    font-size:
+        clamp(20px, 2.2vw, 30px);
+
+}
+
+
+.stat-box span {
+
+    color: #eeeeee;
+
+    font-size: 13px;
+
+}
+
+
+.stat-divider {
+
+    width: 1px;
+
+    height: 70px;
+
+    background:
+        rgba(255, 255, 255, 0.2);
+
+}
+
+
+/* =========================================================
+   TRUST
+========================================================= */
+
+.trust-section {
+
+    width: min(1100px, 94%);
+
+    margin: 30px auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.trust-item {
+
+    min-height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    color: #dddddd;
+
+    font-size: 14px;
+
+}
+
+
+.trust-item span {
+
+    font-size: 22px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.main-footer {
+
+    text-align: center;
+
+    padding: 28px 15px 35px;
+
+    border-top:
+        1px solid #202020;
+
+    background: #040407;
+
+    color: #777777;
+
+    font-size: 13px;
+
+}
+
+
+.main-footer p + p {
+
+    margin-top: 6px;
+
+    color: #999999;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .header-inner {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        padding: 12px 0;
+
+    }
+
+
+    .live-clock {
+
+        order: 3;
+
+        min-width: 380px;
+
+    }
+
+
+    .main-options {
+
+        gap: 18px;
+
+    }
+
+
+    .option-card {
+
+        padding:
+            24px 18px;
+
+    }
+
+
+    .equipment-area {
+
+        display: none;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .main-header {
+
+        position: relative;
+
+    }
+
+
+    .header-inner {
+
+        width: 94%;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+
+    .logo {
+
+        font-size: 23px;
+
+    }
+
+
+    .live-clock {
+
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 9px 10px;
+
+        gap: 8px;
+
+    }
+
+
+    .date-box,
+    .time-box {
+
+        font-size: 11px;
+
+    }
+
+
+    .clock-line {
+
+        height: 17px;
+
+    }
+
+
+    .live-badge {
+
+        font-size: 9px;
+
+        padding: 4px 7px;
+
+    }
+
+
+    .contact-box {
+
+        display: none;
+
+    }
+
+
+    .hero-section {
+
+        min-height: auto;
+
+        padding:
+            55px 3% 40px;
+
+    }
+
+
+    .hero-content {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .hero-content h1 {
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .main-options {
+
+        width: 96%;
+
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+
+    }
+
+
+    .option-card {
+
+        min-height: auto;
+
+    }
+
+
+    .stats-section {
+
+        width: 94%;
+
+        margin-top: 20px;
+
+        padding: 20px 10px;
+
+    }
+
+
+    .stats-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 20px;
+
+    }
+
+
+    .stat-divider {
+
+        display: none;
+
+    }
+
+
+    .trust-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+
+        margin-top: 20px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .hero-section {
+
+        padding-top: 40px;
+
+    }
+
+
+    .welcome-text {
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .hero-content h2 {
+
+        font-size: 22px;
+
+    }
+
+
+    .hero-subtitle {
+
+        font-size: 17px;
+
+    }
+
+
+    .live-clock {
+
+        overflow: hidden;
+
+    }
+
+
+    .date-box,
+    .time-box {
+
+        white-space: nowrap;
+
+        font-size: 10px;
+
+    }
+
+
+    .option-card h3 {
+
+        font-size: 22px;
+
+    }
+
+
+    .stat-box strong {
+
+        font-size: 22px;
+
+    }
+
+}

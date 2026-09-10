@@ -1,0 +1,1197 @@
+/* =========================================
+   DJ BOOKING PRO
+   PAYMENT PAGE
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+html {
+
+    font-size: 16px;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #080c15,
+            #151e31
+        );
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+
+    width: 100%;
+
+    padding:
+        clamp(1rem, 3vw, 1.5rem);
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff0055,
+            #ff7a00,
+            #ffcc00
+        );
+
+}
+
+
+.brand {
+
+    width: 100%;
+
+    max-width: 75rem;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1rem;
+
+}
+
+
+.fake-logo {
+
+    width:
+        clamp(3rem, 8vw, 4.5rem);
+
+    aspect-ratio: 1;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #ff0055;
+
+    font-size:
+        clamp(1.8rem, 5vw, 3rem);
+
+}
+
+
+.brand h1 {
+
+    font-size:
+        clamp(1.3rem, 4vw, 2.2rem);
+
+}
+
+
+.brand p {
+
+    margin-top: .25rem;
+
+    font-size:
+        clamp(.8rem, 2vw, 1rem);
+
+}
+
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+.progress {
+
+    width: 100%;
+
+    max-width: 70rem;
+
+    margin:
+        1.5rem auto;
+
+    padding:
+        0 1rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.progress-step {
+
+    min-width: 3.5rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: .4rem;
+
+}
+
+
+.progress-step span {
+
+    width: 2.4rem;
+
+    height: 2.4rem;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #334155;
+
+    color: #cbd5e1;
+
+    font-weight: bold;
+
+}
+
+
+.progress-step.done span {
+
+    background: #16a34a;
+
+    color: #ffffff;
+
+}
+
+
+.progress-step.active span {
+
+    background: #ff0055;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 0 .8rem
+        rgba(255, 0, 85, .5);
+
+}
+
+
+.progress-step small {
+
+    font-size:
+        clamp(.6rem, 1.5vw, .8rem);
+
+    color: #94a3b8;
+
+}
+
+
+.progress-step.done small,
+.progress-step.active small {
+
+    color: #ffffff;
+
+    font-weight: bold;
+
+}
+
+
+.progress-line {
+
+    width:
+        clamp(1.5rem, 8vw, 6rem);
+
+    height: .15rem;
+
+    background: #334155;
+
+}
+
+
+.progress-line.done {
+
+    background: #16a34a;
+
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.container {
+
+    width: 100%;
+
+    padding: 1rem;
+
+}
+
+
+.payment-card {
+
+    width: 100%;
+
+    max-width: 60rem;
+
+    margin: auto;
+
+    padding:
+        clamp(1rem, 4vw, 2.5rem);
+
+    background: #182235;
+
+    border:
+        1px solid #334155;
+
+    border-radius: 1rem;
+
+    box-shadow:
+        0 1rem 3rem
+        rgba(0, 0, 0, .35);
+
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.heading {
+
+    text-align: center;
+
+    margin-bottom: 2rem;
+
+}
+
+
+.step-badge {
+
+    display: inline-block;
+
+    padding:
+        .35rem .8rem;
+
+    border-radius: 2rem;
+
+    background:
+        rgba(255, 0, 85, .15);
+
+    color: #ffcc00;
+
+    font-size: .8rem;
+
+    font-weight: bold;
+
+}
+
+
+.heading h2 {
+
+    margin-top: .8rem;
+
+    font-size:
+        clamp(1.5rem, 5vw, 2.2rem);
+
+}
+
+
+.heading p {
+
+    margin-top: .5rem;
+
+    color: #b8c1d1;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   COMMON BOX
+========================================= */
+
+.info-box,
+.amount-box,
+.method-box,
+.upi-box,
+.cash-box,
+.payment-action {
+
+    margin-bottom: 1.3rem;
+
+    padding:
+        clamp(1rem, 3vw, 1.4rem);
+
+    border-radius: .8rem;
+
+    background: #101827;
+
+    border:
+        1px solid #334155;
+
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .7rem;
+
+    margin-bottom: 1rem;
+
+}
+
+
+.section-title > span {
+
+    font-size: 1.4rem;
+
+}
+
+
+.section-title h3 {
+
+    font-size:
+        clamp(1rem, 3vw, 1.2rem);
+
+}
+
+
+.section-title p {
+
+    margin-top: .25rem;
+
+    color: #94a3b8;
+
+    font-size: .85rem;
+
+}
+
+
+/* =========================================
+   BOOKING INFO
+========================================= */
+
+.info-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: .7rem;
+
+    margin-bottom: 1rem;
+
+}
+
+
+.info-icon {
+
+    font-size: 1.4rem;
+
+}
+
+
+.info-header h3 {
+
+    font-size: 1.15rem;
+
+}
+
+
+.info-header p {
+
+    margin-top: .25rem;
+
+    color: #94a3b8;
+
+    font-size: .85rem;
+
+    line-height: 1.4;
+
+}
+
+
+.customer-summary {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: .8rem;
+
+}
+
+
+.summary-item {
+
+    padding: .85rem;
+
+    border-radius: .55rem;
+
+    background: #182235;
+
+}
+
+
+.summary-item span {
+
+    display: block;
+
+    margin-bottom: .3rem;
+
+    color: #94a3b8;
+
+    font-size: .78rem;
+
+}
+
+
+.summary-item strong {
+
+    display: block;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+/* =========================================
+   AMOUNT
+========================================= */
+
+.amount-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    padding: .8rem 0;
+
+    border-bottom:
+        1px solid #293548;
+
+}
+
+
+.amount-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.amount-row span {
+
+    color: #cbd5e1;
+
+}
+
+
+.amount-row strong {
+
+    white-space: nowrap;
+
+}
+
+
+.advance-row strong {
+
+    color: #22c55e;
+
+    font-size:
+        clamp(1.1rem, 3vw, 1.4rem);
+
+}
+
+
+.remaining-row strong {
+
+    color: #fb923c;
+
+}
+
+
+/* =========================================
+   METHOD
+========================================= */
+
+.method-info {
+
+    margin-top: -.4rem;
+
+    margin-bottom: 1rem;
+
+    color: #94a3b8;
+
+    font-size: .85rem;
+
+    line-height: 1.5;
+
+}
+
+
+.method-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: .8rem;
+
+}
+
+
+.method-option {
+
+    position: relative;
+
+    cursor: pointer;
+
+}
+
+
+.method-option input {
+
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+
+.method-content {
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .7rem;
+
+    padding: 1rem;
+
+    border:
+        1px solid #475569;
+
+    border-radius: .7rem;
+
+    background: #182235;
+
+    transition: .2s ease;
+
+}
+
+
+.method-option:hover .method-content {
+
+    border-color: #ffcc00;
+
+    transform:
+        translateY(-.1rem);
+
+}
+
+
+.method-option input:checked
++ .method-content {
+
+    border-color: #ff0055;
+
+    background:
+        rgba(255, 0, 85, .1);
+
+    box-shadow:
+        0 0 0 .12rem
+        rgba(255, 0, 85, .12);
+
+}
+
+
+.method-icon {
+
+    font-size: 1.5rem;
+
+}
+
+
+.method-content strong {
+
+    display: block;
+
+}
+
+
+.method-content small {
+
+    display: block;
+
+    margin-top: .25rem;
+
+    color: #94a3b8;
+
+    line-height: 1.3;
+
+}
+
+
+/* =========================================
+   UPI
+========================================= */
+
+.upi-box {
+
+    display: none;
+
+}
+
+
+.upi-box.show {
+
+    display: block;
+
+}
+
+
+.test-payment-message {
+
+    padding: 1rem;
+
+    border-radius: .6rem;
+
+    background:
+        rgba(255, 204, 0, .08);
+
+    border:
+        1px solid
+        rgba(255, 204, 0, .25);
+
+}
+
+
+.test-payment-message strong {
+
+    color: #ffcc00;
+
+}
+
+
+.test-payment-message p {
+
+    margin-top: .4rem;
+
+    color: #cbd5e1;
+
+    line-height: 1.5;
+
+    font-size: .85rem;
+
+}
+
+
+/* =========================================
+   CASH
+========================================= */
+
+.cash-box {
+
+    display: none;
+
+}
+
+
+.cash-box.show {
+
+    display: block;
+
+}
+
+
+.cash-box > p {
+
+    color: #94a3b8;
+
+    line-height: 1.5;
+
+}
+
+
+.owner-contact {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: .3rem;
+
+    margin-top: 1rem;
+
+    padding: 1rem;
+
+    border-radius: .6rem;
+
+    background: #182235;
+
+}
+
+
+.owner-contact > span:first-child {
+
+    color: #94a3b8;
+
+    font-size: .8rem;
+
+}
+
+
+.owner-contact > strong {
+
+    color: #ffcc00;
+
+}
+
+
+/* =========================================
+   PAYMENT ACTION
+========================================= */
+
+.payment-action {
+
+    border-color:
+        rgba(22, 163, 74, .3);
+
+}
+
+
+.secure-heading {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: .8rem;
+
+}
+
+
+.secure-heading > span {
+
+    font-size: 1.5rem;
+
+}
+
+
+.secure-heading strong {
+
+    color: #4ade80;
+
+}
+
+
+.secure-heading p {
+
+    margin-top: .25rem;
+
+    color: #94a3b8;
+
+    font-size: .82rem;
+
+    line-height: 1.4;
+
+}
+
+
+.pay-button {
+
+    width: 100%;
+
+    margin-top: 1rem;
+
+    padding:
+        1rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: .6rem;
+
+    border: none;
+
+    border-radius: .7rem;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff0055,
+            #ff7a00
+        );
+
+    color: #ffffff;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+
+}
+
+
+.pay-button:hover {
+
+    transform:
+        translateY(-.1rem);
+
+    filter: brightness(1.08);
+
+}
+
+
+.pay-button:disabled {
+
+    opacity: .6;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+}
+
+
+.test-note {
+
+    margin-top: .7rem;
+
+    text-align: center;
+
+    color: #fbbf24;
+
+    font-size: .75rem;
+
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.error {
+
+    min-height: 1rem;
+
+    margin-top: .6rem;
+
+    color: #ff6b81;
+
+    font-size: .85rem;
+
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.payment-status {
+
+    display: none;
+
+    margin-bottom: 1.2rem;
+
+    padding: 1rem;
+
+    border-radius: .7rem;
+
+    text-align: center;
+
+    line-height: 1.5;
+
+}
+
+
+.payment-status.show {
+
+    display: block;
+
+}
+
+
+.payment-status.success {
+
+    background:
+        rgba(22, 163, 74, .12);
+
+    border:
+        1px solid
+        rgba(22, 163, 74, .35);
+
+    color: #86efac;
+
+}
+
+
+.payment-status.error {
+
+    background:
+        rgba(239, 68, 68, .12);
+
+    border:
+        1px solid
+        rgba(239, 68, 68, .35);
+
+    color: #fca5a5;
+
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-button {
+
+    width: 100%;
+
+    padding: .95rem 1rem;
+
+    border:
+        1px solid #475569;
+
+    border-radius: .7rem;
+
+    background: #334155;
+
+    color: #ffffff;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+
+}
+
+
+.back-button:hover {
+
+    border-color: #ffcc00;
+
+}
+
+
+/* =========================================
+   SECURITY
+========================================= */
+
+.security-note {
+
+    display: flex;
+
+    gap: .8rem;
+
+    margin-top: 1.5rem;
+
+    padding: 1rem;
+
+    border-radius: .6rem;
+
+    background:
+        rgba(22, 163, 74, .08);
+
+    border:
+        1px solid
+        rgba(22, 163, 74, .25);
+
+}
+
+
+.security-note > span {
+
+    font-size: 1.4rem;
+
+}
+
+
+.security-note > div {
+
+    flex: 1;
+
+}
+
+
+.security-note strong {
+
+    color: #4ade80;
+
+}
+
+
+.security-note p {
+
+    margin-top: .4rem;
+
+    color: #a7b4c8;
+
+    font-size: .82rem;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    margin-top: 2rem;
+
+    padding: 1.5rem 1rem;
+
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: .85rem;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 45rem) {
+
+    .brand {
+
+        justify-content: flex-start;
+
+    }
+
+
+    .progress {
+
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        padding-bottom: .5rem;
+
+    }
+
+
+    .progress-step {
+
+        flex-shrink: 0;
+
+    }
+
+
+    .progress-line {
+
+        flex-shrink: 0;
+
+        width: 2rem;
+
+    }
+
+
+    .method-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .customer-summary {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 30rem) {
+
+    .amount-row {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: .3rem;
+
+    }
+
+
+    .amount-row strong {
+
+        align-self: flex-end;
+
+    }
+
+}

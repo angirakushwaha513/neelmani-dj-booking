@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>DJ Booking Pro - Event Details</title>
+
+    <link
+        rel="stylesheet"
+        href="event.css">
+
+</head>
+
+
+<body>
+
+
+<header class="site-header">
+
+    <div class="logo-box">
+
+        <div class="fake-logo">
+            🎧
+        </div>
+
+        <div>
+
+            <h1>DJ BOOKING PRO</h1>
+
+            <p>
+                NEELMANI KUSHWAHA
+            </p>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     PROGRESS
+========================================= -->
+
+<div class="progress-container">
+
+    <div class="step completed">
+
+        <span>✓</span>
+
+        <p>Customer</p>
+
+    </div>
+
+
+    <div class="line completed-line"></div>
+
+
+    <div class="step active">
+
+        <span>2</span>
+
+        <p>Event</p>
+
+    </div>
+
+
+    <div class="line"></div>
+
+
+    <div class="step">
+
+        <span>3</span>
+
+        <p>Package</p>
+
+    </div>
+
+
+    <div class="line"></div>
+
+
+    <div class="step">
+
+        <span>4</span>
+
+        <p>Payment</p>
+
+    </div>
+
+
+    <div class="line"></div>
+
+
+    <div class="step">
+
+        <span>5</span>
+
+        <p>Receipt</p>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="main-container">
+
+
+    <section class="booking-card">
+
+
+        <div class="step-heading">
+
+            <span class="step-number">
+                STEP 2
+            </span>
+
+            <h2>
+                Event Details
+            </h2>
+
+            <p>
+                Enter the details of your event.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================
+             FORM
+        ================================== -->
+
+        <form id="eventForm">
+
+
+            <!-- EVENT TYPE -->
+
+            <div class="form-group">
+
+                <label for="eventType">
+
+                    Event Type
+
+                    <span>*</span>
+
+                </label>
+
+
+                <select
+                    id="eventType"
+                    name="eventType"
+                    required>
+
+                    <option value="">
+                        Select Event Type
+                    </option>
+
+                    <option value="Tilak">
+                        Tilak
+                    </option>
+
+                    <option value="Shaadi">
+                        Shaadi
+                    </option>
+
+                    <option value="Barhao">
+                        Barhao
+                    </option>
+
+                    <option value="Birthday">
+                        Birthday
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+
+                <small
+                    id="eventTypeError"
+                    class="error">
+                </small>
+
+            </div>
+
+
+
+            <!-- OTHER EVENT -->
+
+            <div
+                class="form-group hidden"
+                id="otherEventGroup">
+
+                <label for="otherEvent">
+
+                    Other Event Name
+
+                    <span>*</span>
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="otherEvent"
+                    name="otherEvent"
+                    placeholder="Enter event name">
+
+
+                <small
+                    id="otherEventError"
+                    class="error">
+                </small>
+
+            </div>
+
+
+
+            <!-- DATE -->
+
+            <div class="form-group">
+
+                <label for="eventDate">
+
+                    Event Date
+
+                    <span>*</span>
+
+                </label>
+
+
+                <input
+                    type="date"
+                    id="eventDate"
+                    name="eventDate"
+                    required>
+
+
+                <small
+                    id="eventDateError"
+                    class="error">
+                </small>
+
+            </div>
+
+
+
+            <!-- TIME -->
+
+            <div class="form-group">
+
+                <label for="eventTime">
+
+                    Event Time
+
+                    <span>*</span>
+
+                </label>
+
+
+                <input
+                    type="time"
+                    id="eventTime"
+                    name="eventTime"
+                    required>
+
+
+                <small
+                    id="eventTimeError"
+                    class="error">
+                </small>
+
+            </div>
+
+
+
+            <!-- EVENT LOCATION -->
+
+            <div class="form-group">
+
+                <label for="eventLocation">
+
+                    Event Location
+
+                    <span>*</span>
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="eventLocation"
+                    name="eventLocation"
+                    placeholder="Enter event location"
+                    required>
+
+
+                <small
+                    id="eventLocationError"
+                    class="error">
+                </small>
+
+            </div>
+
+
+
+            <!-- =================================
+                 DISTRICT
+            ================================== -->
+
+            <div class="form-group">
+
+                <label for="district">
+
+                    District
+
+                    <span>*</span>
+
+                </label>
+
+
+                <select
+                    id="district"
+                    name="district"
+                    required>
+
+                    <option value="">
+                        Select District
+                    </option>
+
+                    <option value="Mauganj">
+                        Mauganj
+                    </option>
+
+                    <option value="Rewa">
+                        Rewa
+                    </option>
+
+                    <option value="Bhopal">
+                        Bhopal
+                    </option>
+
+                </select>
+
+
+                <small
+                    id="districtError"
+                    class="error">
+                </small>
+
+            </div>
+
+
+
+            <!-- =================================
+                 TEHSIL
+            ================================== -->
+
+            <div class="form-group">
+
+                <label for="tehsil">
+
+                    Tehsil
+
+                    <span>*</span>
+
+                </label>
+
+
+                <select
+                    id="tehsil"
+                    name="tehsil"
+                    required
+                    disabled>
+
+                    <option value="">
+                        First Select District
+                    </option>
+
+                </select>
+
+
+                <small
+                    id="tehsilError"
+                    class="error">
+                </small>
+
+            </div>
+
+
+
+            <!-- =================================
+                 VILLAGE
+            ================================== -->
+
+            <div class="form-group">
+
+                <label for="village">
+
+                    Village / Gram
+
+                    <span>*</span>
+
+                </label>
+
+
+                <select
+                    id="village"
+                    name="village"
+                    required
+                    disabled>
+
+                    <option value="">
+                        First Select Tehsil
+                    </option>
+
+                </select>
+
+
+                <small
+                    id="villageError"
+                    class="error">
+                </small>
+
+            </div>
+<!-- ======        PIN CODE
+            ================================== -->
+
+            
+
+
+
+
+
+            
+            <!-- VENUE ADDRESS -->
+
+            <div class="form-group">
+
+                <label for="venueAddress">
+
+                    Complete Venue Address
+
+                    <span>*</span>
+
+                </label>
+
+
+                <textarea
+                    id="venueAddress"
+                    name="venueAddress"
+                    rows="4"
+                    placeholder="Enter complete venue address"
+                    required></textarea>
+
+
+                <small
+                    id="venueAddressError"
+                    class="error">
+                </small>
+
+            </div>
+
+
+
+            <!-- EVENT NOTE -->
+
+            <div class="form-group">
+
+                <label for="eventNote">
+
+                    Additional Note
+
+                    <span class="optional">
+                        (Optional)
+                    </span>
+
+                </label>
+
+
+                <textarea
+                    id="eventNote"
+                    name="eventNote"
+                    rows="4"
+                    placeholder="Any additional information"></textarea>
+
+            </div>
+
+
+
+            <!-- BUTTONS -->
+
+            <div class="button-row">
+
+                <button
+                    type="button"
+                    class="back-btn"
+                    id="backBtn">
+
+                    ← Back
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="continue-btn">
+
+                    Continue →
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    © 2026 DJ Booking Pro -
+    NEELMANI KUSHWAHA
+
+</footer>
+
+
+
+<script src="event.js"></script>
+
+
+</body>
+
+</html>

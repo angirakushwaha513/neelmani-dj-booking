@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        DJ Booking Pro - Admin Panel
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="admin-header">
+
+
+        <div class="admin-brand">
+
+            <div class="admin-logo">
+                🎧
+            </div>
+
+            <div>
+
+                <h1>
+                    DJ Booking Pro
+                </h1>
+
+                <p>
+                    Admin Dashboard
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <button
+                id="refreshButton"
+                class="header-button"
+            >
+                🔄 Refresh
+            </button>
+
+
+            <button
+                id="logoutButton"
+                class="logout-button"
+            >
+                🚪 Logout
+            </button>
+
+        </div>
+
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main class="admin-container">
+
+
+        <!-- =====================================
+             PAGE TITLE
+        ====================================== -->
+
+        <section class="page-heading">
+
+            <div>
+
+                <h2>
+                    Booking Dashboard
+                </h2>
+
+                <p>
+                    यहाँ आपकी सभी customer bookings दिखाई देंगी।
+                </p>
+
+            </div>
+
+
+            <div
+                id="lastUpdated"
+                class="last-updated"
+            >
+                Last updated: —
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             STATISTICS
+        ====================================== -->
+
+        <section class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <span class="stat-icon">
+                    📋
+                </span>
+
+                <div>
+
+                    <small>
+                        Total Bookings
+                    </small>
+
+                    <strong id="totalBookings">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card pending">
+
+                <span class="stat-icon">
+                    ⏳
+                </span>
+
+                <div>
+
+                    <small>
+                        Pending
+                    </small>
+
+                    <strong id="pendingBookings">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card confirmed">
+
+                <span class="stat-icon">
+                    ✅
+                </span>
+
+                <div>
+
+                    <small>
+                        Confirmed
+                    </small>
+
+                    <strong id="confirmedBookings">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card paid">
+
+                <span class="stat-icon">
+                    💰
+                </span>
+
+                <div>
+
+                    <small>
+                        Paid
+                    </small>
+
+                    <strong id="paidBookings">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =====================================
+             STATUS
+        ====================================== -->
+
+        <div
+            id="adminStatus"
+            class="admin-status"
+        ></div>
+
+
+        <!-- =====================================
+             FILTERS
+        ====================================== -->
+
+        <section class="filter-box">
+
+
+            <div class="filter-title">
+
+                <h3>
+                    🔎 Search Bookings
+                </h3>
+
+            </div>
+
+
+            <div class="filters">
+
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search name, mobile, booking number..."
+                >
+
+
+                <select id="statusFilter">
+
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                    <option value="Confirmed">
+                        Confirmed
+                    </option>
+
+                    <option value="Cancelled">
+                        Cancelled
+                    </option>
+
+                </select>
+
+
+                <select id="paymentFilter">
+
+                    <option value="all">
+                        All Payment
+                    </option>
+
+                    <option value="Paid">
+                        Paid
+                    </option>
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                </select>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =====================================
+             BOOKINGS
+        ====================================== -->
+
+        <section class="bookings-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h3>
+                        📋 Customer Bookings
+                    </h3>
+
+                    <p id="bookingCount">
+                        0 bookings
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="bookingsContainer"
+                class="bookings-container"
+            ></div>
+
+
+            <!-- EMPTY -->
+
+            <div
+                id="emptyState"
+                class="empty-state"
+            >
+
+                <div>
+                    📭
+                </div>
+
+                <h3>
+                    No bookings found
+                </h3>
+
+                <p>
+                    अभी कोई booking उपलब्ध नहीं है।
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         BOOKING DETAIL MODAL
+    ========================================== -->
+
+    <div
+        id="bookingModal"
+        class="modal"
+    >
+
+
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <h2>
+                        Booking Details
+                    </h2>
+
+                    <p id="modalBookingNumber">
+                        —
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="closeModalButton"
+                    class="close-modal"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div
+                id="bookingDetails"
+                class="booking-details"
+            ></div>
+
+
+            <div class="modal-actions">
+
+
+                <button
+                    id="modalConfirmButton"
+                    class="confirm-button"
+                >
+                    ✅ Confirm Booking
+                </button>
+
+
+                <button
+                    id="modalCancelButton"
+                    class="cancel-button"
+                >
+                    ❌ Cancel Booking
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

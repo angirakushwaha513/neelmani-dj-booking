@@ -1,0 +1,4 @@
+node_modules/
+.env
+dj_booking.db-shm
+dj_booking.db-wal

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Review Booking - DJ Booking Pro</title>
+
+    <link rel="stylesheet" href="review.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="brand">
+
+        <div class="fake-logo">
+            🎧
+        </div>
+
+        <div>
+            <h1>DJ BOOKING PRO</h1>
+            <p>NEELMANI KUSHWAHA</p>
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     PROGRESS
+===================================================== -->
+
+<div class="progress">
+
+    <div class="progress-step done">
+        <span>✓</span>
+        <small>Customer</small>
+    </div>
+
+    <div class="progress-line done"></div>
+
+    <div class="progress-step done">
+        <span>✓</span>
+        <small>Event</small>
+    </div>
+
+    <div class="progress-line done"></div>
+
+    <div class="progress-step done">
+        <span>✓</span>
+        <small>Package</small>
+    </div>
+
+    <div class="progress-line done"></div>
+
+    <div class="progress-step active">
+        <span>4</span>
+        <small>Review</small>
+    </div>
+
+    <div class="progress-line"></div>
+
+    <div class="progress-step">
+        <span>5</span>
+        <small>Payment</small>
+    </div>
+
+</div>
+
+
+<main class="container">
+
+    <section class="review-card">
+
+        <!-- =================================================
+             HEADING
+        ================================================== -->
+
+        <div class="heading">
+
+            <span class="step-badge">
+                STEP 4
+            </span>
+
+            <h2>
+                Review Your Booking
+            </h2>
+
+            <p>
+                Payment करने से पहले अपनी सभी booking
+                details को ध्यान से check करें।
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             CUSTOMER INFORMATION
+        ================================================== -->
+
+        <section class="review-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-icon">👤</span>
+
+                    <div>
+                        <h3>Customer Information</h3>
+
+                        <p>
+                            Customer की जानकारी
+                        </p>
+                    </div>
+                </div>
+
+                <button
+                    type="button"
+                    class="edit-button"
+                    id="editCustomerButton">
+
+                    ✏️ Edit
+
+                </button>
+
+            </div>
+
+
+            <div class="info-grid">
+
+                <div class="info-item">
+
+                    <span>Name</span>
+
+                    <strong id="customerName">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>Mobile Number</span>
+
+                    <strong id="customerMobile">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item full">
+
+                    <span>Address</span>
+
+                    <strong id="customerAddress">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             EVENT INFORMATION
+        ================================================== -->
+
+        <section class="review-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-icon">🗓️</span>
+
+                    <div>
+                        <h3>Event Information</h3>
+
+                        <p>
+                            कार्यक्रम की जानकारी
+                        </p>
+                    </div>
+                </div>
+
+                <button
+                    type="button"
+                    class="edit-button"
+                    id="editEventButton">
+
+                    ✏️ Edit
+
+                </button>
+
+            </div>
+
+
+            <div class="info-grid">
+
+                <div class="info-item">
+
+                    <span>Event Type</span>
+
+                    <strong id="eventType">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>Event Date</span>
+
+                    <strong id="eventDate">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>Event Time</span>
+
+                    <strong id="eventTime">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>District</span>
+
+                    <strong id="district">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>Tehsil</span>
+
+                    <strong id="tehsil">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>Village / City</span>
+
+                    <strong id="villageCity">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item full">
+
+                    <span>Event Address</span>
+
+                    <strong id="eventAddress">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             DJ PACKAGE
+        ================================================== -->
+
+        <section class="review-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-icon">🎧</span>
+
+                    <div>
+                        <h3>DJ Package</h3>
+
+                        <p>
+                            Selected package और equipment
+                        </p>
+                    </div>
+                </div>
+
+                <button
+                    type="button"
+                    class="edit-button"
+                    id="editPackageButton">
+
+                    ✏️ Edit
+
+                </button>
+
+            </div>
+
+
+            <div class="info-grid">
+
+                <div class="info-item">
+
+                    <span>Selected Package</span>
+
+                    <strong id="packageName">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>Package Amount</span>
+
+                    <strong id="packageAmount">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item full">
+
+                    <span>Extra Equipment</span>
+
+                    <strong id="extraEquipment">
+                        None
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>Extra Equipment Amount</span>
+
+                    <strong id="extraEquipmentAmount">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 TOTAL
+            ================================================== -->
+
+            <div class="amount-summary">
+
+                <div class="amount-row">
+
+                    <span>
+                        Total Amount
+                    </span>
+
+                    <strong id="totalAmount">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="amount-row advance">
+
+                    <span>
+                        Advance Amount
+                    </span>
+
+                    <strong id="advanceAmount">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="amount-row remaining">
+
+                    <span>
+                        Remaining Amount
+                    </span>
+
+                    <strong id="remainingAmount">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             WARNING
+        ================================================== -->
+
+        <div class="review-note">
+
+            <span>🔒</span>
+
+            <div>
+
+                <strong>
+                    Before Payment
+                </strong>
+
+                <p>
+                    कृपया ऊपर दी गई सभी जानकारी को ध्यान से
+                    check करें। अगर कोई जानकारी गलत है तो
+                    Edit button से उसे बदलें।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             ERROR
+        ================================================== -->
+
+        <div
+            id="reviewError"
+            class="review-error">
+        </div>
+
+
+        <!-- =================================================
+             BUTTONS
+        ================================================== -->
+
+        <div class="action-buttons">
+
+            <button
+                type="button"
+                class="back-button"
+                id="backButton">
+
+                ← Back
+
+            </button>
+
+
+            <button
+                type="button"
+                class="continue-button"
+                id="continueButton">
+
+                Continue to Payment →
+
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    © 2026 DJ Booking Pro |
+    NEELMANI KUSHWAHA
+
+</footer>
+
+
+<script src="review.js"></script>
+
+</body>
+
+</html>
