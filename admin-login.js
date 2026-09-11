@@ -18,7 +18,7 @@ const GOOGLE_CLIENT_ID =
 ========================================= */
 
 const BACKEND_URL =
-    "http://localhost:3000";
+    "https://neelmani-dj-booking.onrender.com";
 
 
 /* =========================================
@@ -86,6 +86,7 @@ function clearMessages() {
 
     }
 
+
     if (loginStatus) {
 
         loginStatus.textContent =
@@ -114,11 +115,14 @@ function showStatus(
 
     }
 
+
     loginStatus.textContent =
         message;
 
+
     loginStatus.className =
         "login-status show";
+
 
     if (type) {
 
@@ -144,6 +148,7 @@ function showError(
         return;
 
     }
+
 
     loginError.textContent =
         message;
@@ -214,6 +219,7 @@ async function handleAdminLogin(
                     method:
                         "POST",
 
+
                     headers: {
 
                         "Content-Type":
@@ -223,6 +229,7 @@ async function handleAdminLogin(
                             "application/json"
 
                     },
+
 
                     body:
                         JSON.stringify({
@@ -354,6 +361,7 @@ async function handleAdminLogin(
             "djAdminToken"
         );
 
+
         sessionStorage.removeItem(
             "djAdminUser"
         );
@@ -366,7 +374,7 @@ async function handleAdminLogin(
 
             showError(
 
-                "Backend connection failed. Please make sure Node.js server is running on http://localhost:3000"
+                "Backend connection failed. Please make sure the online backend is running."
 
             );
 
@@ -437,6 +445,7 @@ async function handleGoogleAdminLogin(
                     method:
                         "POST",
 
+
                     headers: {
 
                         "Content-Type":
@@ -446,6 +455,7 @@ async function handleGoogleAdminLogin(
                             "application/json"
 
                     },
+
 
                     body:
                         JSON.stringify({
@@ -585,6 +595,7 @@ async function handleGoogleAdminLogin(
             "djAdminToken"
         );
 
+
         sessionStorage.removeItem(
             "djAdminUser"
         );
@@ -597,7 +608,7 @@ async function handleGoogleAdminLogin(
 
             showError(
 
-                "Backend connection failed. Please make sure Node.js server is running on http://localhost:3000"
+                "Backend connection failed. Please make sure the online backend is running."
 
             );
 
@@ -630,6 +641,7 @@ function waitForGoogle() {
             let attempts =
                 0;
 
+
             const maxAttempts =
                 40;
 
@@ -654,9 +666,11 @@ function waitForGoogle() {
                                 timer
                             );
 
+
                             resolve(
                                 true
                             );
+
 
                             return;
 
@@ -671,6 +685,7 @@ function waitForGoogle() {
                             clearInterval(
                                 timer
                             );
+
 
                             resolve(
                                 false
