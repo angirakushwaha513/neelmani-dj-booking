@@ -76,13 +76,18 @@ function clearGoogleSession() {
     );
 
 
-    /*
-       Google credential bhi clear karein
-       taaki old credential use na ho.
-    */
-
     localStorage.removeItem(
         "customerGoogleCredential"
+    );
+
+
+    /*
+       Current browser tab/session ka
+       verification flag bhi clear karein.
+    */
+
+    sessionStorage.removeItem(
+        "googleVerifiedThisVisit"
     );
 
 }
@@ -236,22 +241,28 @@ async function handleGoogleLogin(
         );
 
 
-        /*
-           =====================================
-           SAVE ORIGINAL GOOGLE CREDENTIAL
-           
-           Backend restart hone par
-           server-side session lost ho sakta hai.
-           Is credential se backend dobara
-           Google account verify kar sakta hai.
-        =====================================
-        */
+        /* =====================================
+           SAVE GOOGLE CREDENTIAL
+        ===================================== */
 
         localStorage.setItem(
 
             "customerGoogleCredential",
 
             googleResponse.credential
+
+        );
+
+
+        /* =====================================
+           GOOGLE VERIFIED FOR THIS VISIT
+        ===================================== */
+
+        sessionStorage.setItem(
+
+            "googleVerifiedThisVisit",
+
+            "true"
 
         );
 
@@ -267,6 +278,10 @@ async function handleGoogleLogin(
             data.user
         );
 
+
+        /* =====================================
+           OPEN INDEX ONLY AFTER VERIFICATION
+        ===================================== */
 
         const indexURL =
             window.location.origin +
@@ -538,7 +553,13 @@ document.addEventListener(
 
     function () {
 
+        /*
+         * Google Login page khulne par
+         * purana verification hata dein.
+         */
+
         clearGoogleSession();
+
 
         initializeGoogleLogin();
 
