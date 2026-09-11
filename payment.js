@@ -10,7 +10,7 @@
 ========================================= */
 
 const BACKEND_URL =
-    "http://localhost:3000";
+    "https://neelmani-dj-booking.onrender.com";
 
 
 /* =========================================
@@ -135,7 +135,6 @@ function loadBookingData() {
             "index.html";
 
         return false;
-
     }
 
 
@@ -149,7 +148,6 @@ function loadBookingData() {
             "event.html";
 
         return false;
-
     }
 
 
@@ -163,7 +161,6 @@ function loadBookingData() {
             "package.html";
 
         return false;
-
     }
 
 
@@ -193,7 +190,6 @@ function loadBookingData() {
                 JSON.parse(
                     confirmationDataRaw
                 );
-
         }
 
 
@@ -218,9 +214,7 @@ function loadBookingData() {
 
 
         return false;
-
     }
-
 }
 
 
@@ -231,23 +225,15 @@ function loadBookingData() {
 function formatMoney(amount) {
 
     return new Intl.NumberFormat(
-
         "en-IN",
-
         {
-
             style: "currency",
-
             currency: "INR",
-
             maximumFractionDigits: 0
-
         }
-
     ).format(
         Number(amount) || 0
     );
-
 }
 
 
@@ -277,7 +263,6 @@ function displayCustomer() {
         customerData.phone ||
 
         "-";
-
 }
 
 
@@ -316,7 +301,6 @@ function getPaymentAmounts() {
                 total - advance,
                 0
             );
-
     }
 
 
@@ -330,9 +314,7 @@ function getPaymentAmounts() {
 
         remaining:
             remaining
-
     };
-
 }
 
 
@@ -365,7 +347,6 @@ function displayAmounts() {
 
 
     return amounts;
-
 }
 
 
@@ -385,7 +366,6 @@ function showStatus(
     paymentStatus.className =
         "payment-status show " +
         type;
-
 }
 
 
@@ -401,7 +381,6 @@ function hideStatus() {
 
     paymentStatus.className =
         "payment-status";
-
 }
 
 
@@ -455,7 +434,6 @@ methodOptions.forEach(
                     upiBox.classList.add(
                         "show"
                     );
-
                 }
 
 
@@ -470,11 +448,9 @@ methodOptions.forEach(
                     cashBox.classList.add(
                         "show"
                     );
-
                 }
 
             }
-
         );
 
     }
@@ -529,7 +505,6 @@ function createConfirmation() {
             "Paid"
 
     };
-
 }
 
 
@@ -577,7 +552,7 @@ async function sendPaymentToBackend(
        =====================================
        GOOGLE SESSION TOKEN
        =====================================
-       
+
        Google login ke time backend se
        mila server session token
        localStorage me save hua hai.
@@ -654,7 +629,6 @@ async function sendPaymentToBackend(
                     )
 
             }
-
         );
 
 
@@ -689,7 +663,6 @@ async function sendPaymentToBackend(
         throw new Error(
             "Server returned an empty response."
         );
-
     }
 
 
@@ -707,6 +680,7 @@ async function sendPaymentToBackend(
                 responseText
             );
 
+
     } catch (error) {
 
         console.error(
@@ -718,7 +692,6 @@ async function sendPaymentToBackend(
         throw new Error(
             "Server returned an invalid response."
         );
-
     }
 
 
@@ -737,7 +710,6 @@ async function sendPaymentToBackend(
             "Server rejected the booking."
 
         );
-
     }
 
 
@@ -756,7 +728,6 @@ async function sendPaymentToBackend(
             "Booking could not be confirmed."
 
         );
-
     }
 
 
@@ -771,12 +742,10 @@ async function sendPaymentToBackend(
         throw new Error(
             "Server did not return a booking number."
         );
-
     }
 
 
     return data;
-
 }
 
 
@@ -1032,7 +1001,6 @@ function saveSuccessfulBooking(
         receiptData
 
     };
-
 }
 
 
@@ -1046,16 +1014,13 @@ payButton.addEventListener(
 
     async function () {
 
-
         /* =================================
            PAYMENT METHOD
         ================================= */
 
         const selectedMethod =
             document.querySelector(
-
                 'input[name="paymentMethod"]:checked'
-
             );
 
 
@@ -1073,9 +1038,7 @@ payButton.addEventListener(
             methodError.textContent =
                 "Please select a payment method.";
 
-
             return;
-
         }
 
 
@@ -1096,16 +1059,11 @@ payButton.addEventListener(
         ) {
 
             showStatus(
-
                 "Invalid total booking amount.",
-
                 "error"
-
             );
 
-
             return;
-
         }
 
 
@@ -1118,16 +1076,11 @@ payButton.addEventListener(
         ) {
 
             showStatus(
-
                 "Invalid advance payment amount.",
-
                 "error"
-
             );
 
-
             return;
-
         }
 
 
@@ -1141,16 +1094,11 @@ payButton.addEventListener(
         ) {
 
             showStatus(
-
                 "Advance cannot be greater than total amount.",
-
                 "error"
-
             );
 
-
             return;
-
         }
 
 
@@ -1167,35 +1115,26 @@ payButton.addEventListener(
 
 
         showStatus(
-
             "Connecting to booking server...",
-
             "success"
-
         );
 
 
         try {
-
 
             /* =================================
                SEND TO BACKEND
             ================================= */
 
             showStatus(
-
                 "Verifying payment with server...",
-
                 "success"
-
             );
 
 
             const serverData =
                 await sendPaymentToBackend(
-
                     selectedMethod.value
-
                 );
 
 
@@ -1204,11 +1143,8 @@ payButton.addEventListener(
             ================================= */
 
             saveSuccessfulBooking(
-
                 serverData,
-
                 selectedMethod.value
-
             );
 
 
@@ -1217,11 +1153,8 @@ payButton.addEventListener(
             ================================= */
 
             showStatus(
-
                 "Payment Successful ✓ Booking Confirmed!",
-
                 "success"
-
             );
 
 
@@ -1249,7 +1182,6 @@ payButton.addEventListener(
 
         } catch (error) {
 
-
             console.error(
                 "Payment / Booking Error:",
                 error
@@ -1266,12 +1198,10 @@ payButton.addEventListener(
             ) {
 
                 showStatus(
-
-                    "Backend connection failed. Make sure Node server is running on http://localhost:3000.",
-
+                    "Online backend connection failed. Please try again.",
                     "error"
-
                 );
+
 
             } else {
 
@@ -1332,6 +1262,100 @@ if (
     loadBookingData()
 ) {
 
+    displayCustomer();
+
+
+    const amounts =
+        displayAmounts();
+
+
+    console.log(
+        "================================="
+    );
+
+
+    console.log(
+        "DJ BOOKING PRO - PAYMENT"
+    );
+
+
+    console.log(
+        "================================="
+    );
+
+
+    console.log(
+        "Customer:",
+        customerData
+    );
+
+
+    console.log(
+        "Event:",
+        eventData
+    );
+
+
+    console.log(
+        "Package:",
+        packageData
+    );
+
+
+    console.log(
+        "Total:",
+        amounts.total
+    );
+
+
+    console.log(
+        "Advance:",
+        amounts.advance
+    );
+
+
+    console.log(
+        "Remaining:",
+        amounts.remaining
+    );
+
+
+    console.log(
+        "Backend:",
+        BACKEND_URL
+    );
+
+
+    console.log(
+        "================================="
+    );
+
+}
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+backButton.addEventListener(
+
+    "click",
+
+    function () {
+
+        window.location.href =
+            "review.html";
+
+    }
+
+);
+
+
+/* =========================================
+   INITIALIZE
+========================================= */
+
+if (
+    loadBookingData()
+) {
 
     displayCustomer();
 
