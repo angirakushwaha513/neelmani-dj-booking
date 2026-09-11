@@ -285,7 +285,7 @@ async function handleGoogleLogin(
 
         const indexURL =
             window.location.origin +
-            "/index.html";
+            "/neelmani-dj-booking/index.html";
 
 
         console.log(
