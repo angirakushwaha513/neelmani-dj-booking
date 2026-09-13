@@ -10,7 +10,7 @@
 ========================================= */
 
 const BACKEND_URL =
-    "http://localhost:3000";
+    "https://neelmani-dj-booking.onrender.com";
 
 
 /* =========================================
