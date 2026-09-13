@@ -851,6 +851,48 @@ document.addEventListener(
 
 
         /* ==============================
+           CLEAR LOGIN FORM ON PAGE LOAD/BACK
+        ============================== */
+
+        function clearAdminLoginFields() {
+
+            const usernameInput =
+                document.getElementById("username");
+
+            const passwordInput =
+                document.getElementById("password");
+
+
+            if (usernameInput) {
+
+                usernameInput.value = "";
+
+                usernameInput.setAttribute(
+                    "autocomplete",
+                    "off"
+                );
+
+            }
+
+
+            if (passwordInput) {
+
+                passwordInput.value = "";
+
+                passwordInput.setAttribute(
+                    "autocomplete",
+                    "new-password"
+                );
+
+            }
+
+        }
+
+
+        clearAdminLoginFields();
+
+
+        /* ==============================
            GOOGLE LOGIN
         ============================== */
 
