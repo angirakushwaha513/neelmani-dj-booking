@@ -3341,15 +3341,16 @@ app.get(
 
 app.get(
     "/api/booking-status/:bookingNumber",
-    (req, res) => {
+    function (req, res) {
 
         try {
 
             const bookingNumber =
                 String(
-                    req.params.bookingNumber ||
-                    ""
-                ).trim();
+                    req.params.bookingNumber || ""
+                )
+                .trim()
+                .toUpperCase();
 
 
             if (!bookingNumber) {
@@ -3366,23 +3367,30 @@ app.get(
             }
 
 
-            const row =
+            const booking =
                 db.prepare(`
                     SELECT
                         id,
                         booking_number,
+                        customer_data,
+                        event_data,
+                        package_data,
+                        confirmation_data,
+                        payment_data,
                         booking_status,
                         payment_status,
                         created_at,
                         verified_at
                     FROM bookings
-                    WHERE booking_number = ?
-                `).get(
+                    WHERE UPPER(booking_number) = ?
+                    LIMIT 1
+                `)
+                .get(
                     bookingNumber
                 );
 
 
-            if (!row) {
+            if (!booking) {
 
                 return res.status(404).json({
 
@@ -3400,35 +3408,16 @@ app.get(
 
                 success: true,
 
-                booking: {
-
-                    id:
-                        row.id,
-
-                    bookingNumber:
-                        row.booking_number,
-
-                    bookingStatus:
-                        row.booking_status,
-
-                    paymentStatus:
-                        row.payment_status,
-
-                    createdAt:
-                        row.created_at,
-
-                    verifiedAt:
-                        row.verified_at
-
-                }
+                booking: booking
 
             });
 
+        }
 
-        } catch (error) {
+        catch (error) {
 
             console.error(
-                "Booking Status Error:",
+                "Booking status error:",
                 error
             );
 
@@ -3438,10 +3427,7 @@ app.get(
                 success: false,
 
                 message:
-                    "Unable to check booking status.",
-
-                error:
-                    error.message
+                    "Unable to check booking status."
 
             });
 
@@ -3449,7 +3435,6 @@ app.get(
 
     }
 );
-
 
 /* =========================================
    BOOKING STATUS COMPATIBILITY
